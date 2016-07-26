@@ -6,8 +6,8 @@
     <ul class="bs-docs-footer-links">
       <li><a href="{{ site.repo }}">GitHub</a></li>
       <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-      <li><a href="./getting-started/#examples">Examples</a></li>
-      <li><a href="./about/">About</a></li>
+      <li><a href="../getting-started/#examples">Examples</a></li>
+      <li><a href="../about/">About</a></li>
     </ul>
 
     <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
@@ -21,20 +21,23 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery.min.js"><\/script>')</script>
+<!--<script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery.min.js"><\/script>')</script>-->
 
-{% if site.github %}
-  <script src="./dist/js/bootstrap.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+{% if page.layout == "home" %}
+  <script src="assets/js/docs.min.js"></script>
+  <script src="assets/js/vendor/holder.min.js"></script>
+  <script src="assets/js/vendor/ZeroClipboard.min.js"></script>
+  <script src="assets/js/vendor/anchor.min.js"></script>
+  <script src="assets/js/src/application.js"></script>
 {% else %}
-  <script src="./dist/js/bootstrap.js"></script>
-{% endif %}
-
-{% if site.github %}
   <script src="../assets/js/docs.min.js"></script>
-{% else %}
-  {% for file in site.data.configBridge.paths.docsJs %}
-  <script src="{{ file }}"></script>
-  {% endfor %}
+  <script src="../assets/js/vendor/holder.min.js"></script>
+  <script src="../assets/js/vendor/ZeroClipboard.min.js"></script>
+  <script src="../assets/js/vendor/anchor.min.js"></script>
+  <script src="../assets/js/src/application.js"></script>
 {% endif %}
 
 {% if page.slug == "customize" %}
@@ -42,14 +45,19 @@
   {% if site.github %}
     <script src="../assets/js/customize.min.js"></script>
   {% else %}
-    {% for file in site.data.configBridge.paths.customizerJs %}
-    <script src="{{ file }}"></script>
-    {% endfor %}
+    <script src="../assets/js/vendor/holder.min.js"></script>
+    <script src="../assets/js/vendor/ZeroClipboard.min.js"></script>
+    <script src="../assets/js/vendor/anchor.min.js"></script>
+    <script src="../assets/js/src/application.js"></script>
   {% endif %}
 {% endif %}
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+{% if page.layout == "home" %}
+  <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+{% else %}
+  <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+{% endif %}
 
 <!-- Analytics
 ================================================== -->
