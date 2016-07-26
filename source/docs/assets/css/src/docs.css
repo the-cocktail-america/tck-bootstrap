@@ -1635,7 +1635,7 @@ h1[id] {
 /*  */
 
 .tck-addon h2:before {
-  background: transparent url(../../img/logo64.png) no-repeat 0 0 /cover;
+  background: transparent url(../img/logo64.png) no-repeat 0 0 /cover;
   content: '';
   display: inline-block;
   height: .75em;
@@ -1644,7 +1644,7 @@ h1[id] {
 }
 
 .bs-docs-sidebar .nav .nav > li.tck-addon > a:before {
-  background: transparent url(../../img/logo64.png) no-repeat 0 0 /cover;
+  background: transparent url(../img/logo64.png) no-repeat 0 0 /cover;
   content: '';
   display: inline-block;
   height: .8em;
