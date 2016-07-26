@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "bootstrap-sass": "~3.3.6"
+  },
+  "description": "TCK-Bootstrap",
+  "homepage": "https://github.com/the-cocktail-america/tck-bootstrap",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "MIT",
+  "name": "tck-bootstrap",
+  "private": false,
+  "version": "0.0.1"
+}
