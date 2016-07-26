@@ -1,0 +1,17 @@
+# Ignore configuration files that may contain sensitive information.
+
+# Node JS
+node_modules
+
+# Build
+dist
+source/docs/docs_site
+
+# Log files
+*.log
+
+# System
+.DS_Store
+
+# Bower
+bower_components
