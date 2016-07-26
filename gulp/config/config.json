@@ -1,0 +1,21 @@
+{
+  "path": {
+    "build":     "./dist/",
+    "css":       "./source/assets/stylesheets/tck-bootstrap.scss",
+    "data":      "./source/data/example.json",
+    "fonts":     "./source/assets/fonts/**/*",
+    "fonts-bs":  "./bower_components/bootstrap-sass/assets/fonts/**/*",
+    "html":      "./source/docs/*.html",
+    "img":       "./source/assets/images/**/*",
+    "js":        "./source/assets/javascripts/**/*.js",
+    "js-bs":     "./bower_components/bootstrap-sass/assets/javascripts/**/*.js",
+    "scss":      "./source/assets/stylesheets/**/*.scss",
+    "scss-bs":   "./bower_components/bootstrap-sass/assets/stylesheets/**/*.scss",
+    "tmpl":      "./source/docs/**/*.html"
+  },
+  "alt-require": true,
+  "bootstrap": {
+    "lint": true,
+    "theme": true
+  }
+}
