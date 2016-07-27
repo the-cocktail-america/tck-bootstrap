@@ -1634,6 +1634,7 @@ h1[id] {
 
 /*  */
 
+.tck-addon h1:before,
 .tck-addon h2:before {
   background: transparent url(../img/logo64.png) no-repeat 0 0 /cover;
   content: '';
@@ -1643,11 +1644,15 @@ h1[id] {
   margin-right: 8px;
 }
 
-.bs-docs-sidebar .nav .nav > li.tck-addon > a:before {
+.bs-docs-sidebar .nav  li.tck-addon > a:before {
   background: transparent url(../img/logo64.png) no-repeat 0 0 /cover;
   content: '';
   display: inline-block;
+  height: .9em;
+  width: .9em;
+  margin-right: 4px;
+}
+.bs-docs-sidebar .nav .nav li.tck-addon > a:before {
   height: .8em;
   width: .8em;
-  margin-right: 4px;
 }
