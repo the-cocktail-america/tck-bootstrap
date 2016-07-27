@@ -58,5 +58,5 @@ gulp.task('generate-styles', function() {
     .pipe(plugins.sourcemaps.write('.'))
     .pipe(plugins.rename({ extname: '.min.css' }))
     .pipe(gulp.dest(config.path.build + 'css'))
-    .pipe(gulp.dest('source/docs/' + config.path.build + 'css'));
+    .pipe(gulp.dest('source/docs/assets/css'));
 });
