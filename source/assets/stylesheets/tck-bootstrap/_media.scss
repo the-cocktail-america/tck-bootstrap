@@ -1,0 +1,35 @@
+//
+// Media addons by TCK Bootstrap
+// --------------------------------------------------
+
+.media.media-responsive {
+  @media (min-width: $screen-md-min) {
+    // Reset text-center
+    &.text-center {
+      .media-body  {
+        text-align: left !important;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    // Set aligments for small devices
+    &.text-center,
+    &.text-right {
+      > .media-left > * {
+        display: inline-block;
+      }
+    }
+
+    // Updates for small devices
+    .media-left {
+      display: block;
+      padding-bottom: $padding-base-vertical;
+      padding-right: 0;
+    }
+    .media-body {
+      display: block;
+      width: auto;
+    }
+  }
+}
