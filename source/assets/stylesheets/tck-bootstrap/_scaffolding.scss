@@ -1,0 +1,44 @@
+//
+// Scaffolding addons by TCK Bootstrap
+// --------------------------------------------------
+
+// Horizontal rules
+// Don't fear the hr
+hr {
+
+  + * {
+    margin-top: $line-height-computed;
+  }
+
+  + .pull-right,
+  + .pull-left {
+    margin-top: 0 !important;
+  }
+
+  &.lg {
+    margin-top:    $line-height-computed * 2;
+    margin-bottom: $line-height-computed * 2;
+
+    + * {
+      margin-top: $line-height-computed * 2;
+    }
+  }
+  &.sm {
+    margin-top:    $line-height-computed / 2;
+    margin-bottom: $line-height-computed / 2;
+
+    + * {
+      margin-top: $line-height-computed / 2;
+    }
+  }
+  &.xs {
+    margin-top:    $line-height-computed / 4;
+    margin-bottom: $line-height-computed / 4;
+
+    + * {
+      margin-top: $line-height-computed / 4;
+    }
+  }
+
+
+}
