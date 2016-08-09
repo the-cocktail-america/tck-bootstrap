@@ -864,6 +864,20 @@
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-justify"</span><span class="nt">&gt;</span>Justified text.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-nowrap"</span><span class="nt">&gt;</span>No wrap text.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
 
+<div class="tck-addon">
+  <h2 id="type-alignment-responsive">Alignment responsive</h2>
+  <p>Realign text to components responsively.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xs-{left|center|right|justify}"</span><span class="nt">&gt;</span>Apply for extra small devices.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-sm-{left|center|right|justify}"</span><span class="nt">&gt;</span>Apply for small devices.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-md-{left|center|right|justify}"</span><span class="nt">&gt;</span>Apply for medium devices.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lg-{left|center|right|justify}"</span><span class="nt">&gt;</span>Apply for large devices.<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+  <div class="bs-example" data-example-id="text-alignment-responsive">
+    <p class="text-xs-justify text-sm-center text-md-left text-lg-right">Justify for extra small, center for small, left for medium and right for large.</p>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-xs-justify text-sm-center text-md-left text-lg-right"</span><span class="nt">&gt;</span>..<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+</div>
+
+
   <h2 id="type-transformation">Transformation classes</h2>
   <p>Transform text in components with text capitalization classes.</p>
   <div class="bs-example" data-example-id="text-capitalization">
@@ -3788,6 +3802,7 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
     <li><a href="#type-body-copy">Body copy</a></li>
     <li><a href="#type-inline-text">Inline text elements</a></li>
     <li><a href="#type-alignment">Alignment classes</a></li>
+    <li class="tck-addon"><a href="#type-alignment-responsive">Alignment responsive</a></li>
     <li><a href="#type-transformation">Transformation classes</a></li>
     <li><a href="#type-abbreviations">Abbreviations</a></li>
     <li><a href="#type-addresses">Addresses</a></li>
