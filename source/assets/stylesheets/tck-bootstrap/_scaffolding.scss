@@ -5,9 +5,11 @@
 // Horizontal rules
 // Don't fear the hr
 hr {
+  margin-top:    ceil($grid-gutter-width / 2);
+  margin-bottom: ceil($grid-gutter-width / 2);
 
   + * {
-    margin-top: $line-height-computed;
+    margin-top: ceil($grid-gutter-width / 2);
   }
 
   + .pull-right,
@@ -16,29 +18,129 @@ hr {
   }
 
   &.lg {
-    margin-top:    $line-height-computed * 2;
-    margin-bottom: $line-height-computed * 2;
+    margin-top:    ceil($grid-gutter-width);
+    margin-bottom: ceil($grid-gutter-width);
 
     + * {
-      margin-top: $line-height-computed * 2;
+      margin-top: ceil($grid-gutter-width);
     }
   }
   &.sm {
-    margin-top:    $line-height-computed / 2;
-    margin-bottom: $line-height-computed / 2;
+    margin-top:    ceil($grid-gutter-width / 4);
+    margin-bottom: ceil($grid-gutter-width / 4);
 
     + * {
-      margin-top: $line-height-computed / 2;
+      margin-top: ceil($grid-gutter-width / 4);
     }
   }
   &.xs {
-    margin-top:    $line-height-computed / 4;
-    margin-bottom: $line-height-computed / 4;
+    margin-top:    ceil($grid-gutter-width / 8);
+    margin-bottom: ceil($grid-gutter-width / 8);
 
     + * {
-      margin-top: $line-height-computed / 4;
+      margin-top: ceil($grid-gutter-width/ 8);
+    }
+  }
+}
+
+// Horizontal rules with text
+.hr-text {
+  display: block;
+  margin-bottom: ceil($grid-gutter-width / 2);
+  margin-top:    ceil($grid-gutter-width / 2);
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+
+  > * {
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after {
+      background-color: $gray-lighter;
+      content: "";
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      width: 9999px;
+    }
+
+    &:before {
+      margin-right: $grid-gutter-width / 2;
+      right: 100%;
+    }
+
+    &:after {
+      left: 100%;
+      margin-left: $grid-gutter-width / 2;
     }
   }
 
+  // Color
+  &.hr-primary {
+    color: $brand-primary;
+
+    > *:before,
+    > *:after {
+      background-color: $brand-primary;
+    }
+  }
+  &.hr-success {
+    color: $brand-success;
+
+    > *:before,
+    > *:after {
+      background-color: $brand-success;
+    }
+  }
+  &.hr-info {
+    color: $brand-info;
+
+    > *:before,
+    > *:after {
+      background-color: $brand-info;
+    }
+  }
+  &.hr-warning {
+    color: $brand-warning;
+
+    > *:before,
+    > *:after {
+      background-color: $brand-warning;
+    }
+  }
+  &.hr-danger {
+    color: $brand-danger;
+
+    > *:before,
+    > *:after {
+      background-color: $brand-danger;
+    }
+  }
+
+  // Aligment
+  &.hr-left {
+    text-align: left;
+    padding-left: $grid-gutter-width;
+  }
+  &.hr-right {
+    text-align: right;
+    padding-right: $grid-gutter-width;
+  }
+
+  // Sizes
+  &.lg {
+    margin-top:    ceil($grid-gutter-width);
+    margin-bottom: ceil($grid-gutter-width);
+  }
+  &.sm {
+    margin-top:    ceil($grid-gutter-width / 4);
+    margin-bottom: ceil($grid-gutter-width / 4);
+  }
+  &.xs {
+    margin-top:    ceil($grid-gutter-width / 8);
+    margin-bottom: ceil($grid-gutter-width / 8);
+  }
 
 }
