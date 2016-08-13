@@ -2578,6 +2578,68 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   </div><!-- /.table-responsive -->
 </div>
 
+<div class="bs-docs-section tck-addon">
+  <h1 id="tabcollapse" class="button-choose">Tab Collapse</h1>
+  <p>Small bootstrap plugin that switches bootstrap tabs component to collapse component for small screens.</p>
+
+  <div class="bs-callout bs-callout-warning" id="callout-buttons-only-click">
+    <h4>Third-party plugin</h4>
+    <p><b>flatlogic/bootstrap-tabcollapse</b> <code>version 0.2.7</code></p>
+    <p>This plugin is owned by <a href="https://github.com/flatlogic">Flatlogic</a> and licensed under <a href="https://raw.githubusercontent.com/flatlogic/bootstrap-tabcollapse/master/LICENSE">The MIT License</a>.</p>
+    <p>View in <a href="https://github.com/flatlogic/bootstrap-tabcollapse">Github</a></p>
+  </div>
+
+  <h3 id="tabcollapse-howitworks">How it works</h3>
+  <p>The most obvious way: bootstrap tab collapse generates accordion markup and appends it right away after tabs component. When accordion becomes (If accordion is) visible tabcollapse searchs for <code>.tab-pane</code> and detaches their content to appropriate accordion groups keeping all attached js data. Tabs component is given <code>hidden-xs</code>-class and accordion component is given <code>visible-xs</code>-class. That's it.</p>
+  <p><a href="http://tabcollapse.okendoken.com/example/example.html">Demo</a></p>
+  <h3 id="tabcollapse-use">Use</h3>
+  <p>Lets say you have your tabs component right from bootstrap's site:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"myTab"</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#home"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#profile"</span> <span class="na">data-toggle=</span><span class="s">"tab"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"myTabContent"</span> <span class="na">class=</span><span class="s">"tab-content"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade in active"</span> <span class="na">id=</span><span class="s">"home"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Raw denim you probably haven't...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tab-pane fade"</span> <span class="na">id=</span><span class="s">"profile"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Food truck fixie locavore, accus...<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+  <p>To activate tab collapse just call:</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab'</span><span class="p">).</span><span class="nx">tabCollapse</span><span class="p">();</span></code></pre></figure>
+  <p>If you want to specify the class that is given to accordion and tabs components you can do so by passing options to <code>tabCollapse</code>:</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab'</span><span class="p">).</span><span class="nx">tabCollapse</span><span class="p">({</span>
+  <span class="na">tabsClass</span><span class="p">:</span> <span class="s1">'hidden-sm'</span><span class="p">,</span>
+  <span class="na">accordionClass</span><span class="p">:</span> <span class="s1">'visible-sm'</span>
+<span class="p">});</span></code></pre></figure>
+  <p>The default class is <code>hidden-xs</code>. So it means that tabs component will be switched to accordion for 767px and below. You can define your own classes and use them. You can also use multiple Bootstrap classes in order to, for example, show accordion for mobile + tablets and tabs for desktop+:</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab'</span><span class="p">).</span><span class="nx">tabCollapse</span><span class="p">({</span>
+  <span class="na">tabsClass</span><span class="p">:</span> <span class="s1">'hidden-sm hidden-xs'</span><span class="p">,</span>
+  <span class="na">accordionClass</span><span class="p">:</span> <span class="s1">'visible-sm visible-xs'</span>
+<span class="p">});</span></code></pre></figure>
+
+  <h3 id="tabcollapse-events">Events</h3>
+  <p>There are four events tabcollapse triggers (for <b>entire</b> component, not for single tabs or accordion groups!):</p>
+  <ul>
+    <li><b>show-tabs.bs.tabcollapse</b> - triggered before tabs component is shown</li>
+    <li><b>shown-tabs.bs.tabcollapse</b> - triggered after tabs component is shown</li>
+    <li><b>show-accordion.bs.tabcollapse</b> - triggered before accordion component is shown</li>
+    <li><b>shown-accordion.bs.tabcollapse</b> - triggered after accordion component is shown</li>
+  </ul>
+  <p>To attach event handler just call:</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myTab'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown-accordion.bs.tabcollapse'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">'accordion is shown now!'</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+  <h4>Attach an event handler when either tab or collapse is opened:</h4>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">"shown.bs.collapse shown.bs.tab"</span><span class="p">,</span> <span class="s2">".panel-collapse, a[data-toggle='tab']"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">'either tab or collapse opened - check arguments to distinguish '</span> <span class="o">+</span> <span class="nx">e</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+</div>
+
 
         </div>
         
@@ -2707,6 +2769,14 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
     <li><a href="#affix-options">Options</a></li>
     <li><a href="#affix-methods">Methods</a></li>
     <li><a href="#affix-events">Events</a></li>
+  </ul>
+</li>
+<li class="tck-addon">
+  <a href="#tabcollapse">Tab Collapse</a>
+  <ul class="nav">
+    <li><a href="#tabcollapse-howitworks">How it works</a></li>
+    <li><a href="#tabcollapse-use">Use</a></li>
+    <li><a href="#tabcollapse-events">Events</a></li>
   </ul>
 </li>
 
