@@ -1,0 +1,73 @@
+<div class="bs-docs-section tck-addon">
+  <h1 id="tabcollapse" class="button-choose">Tab Collapse</h1>
+  <p>Small bootstrap plugin that switches bootstrap tabs component to collapse component for small screens.</p>
+
+  <div class="bs-callout bs-callout-warning" id="callout-buttons-only-click">
+    <h4>Third-party plugin</h4>
+    <p><b>flatlogic/bootstrap-tabcollapse</b> <code>version 0.2.7</code></p>
+    <p>This plugin is owned by <a href="https://github.com/flatlogic">Flatlogic</a> and licensed under <a href="https://raw.githubusercontent.com/flatlogic/bootstrap-tabcollapse/master/LICENSE">The MIT License</a>.</p>
+    <p>View in <a href="https://github.com/flatlogic/bootstrap-tabcollapse">Github</a></p>
+  </div>
+
+  <h3 id="tabcollapse-howitworks">How it works</h3>
+  <p>The most obvious way: bootstrap tab collapse generates accordion markup and appends it right away after tabs component. When accordion becomes (If accordion is) visible tabcollapse searchs for <code>.tab-pane</code> and detaches their content to appropriate accordion groups keeping all attached js data. Tabs component is given <code>hidden-xs</code>-class and accordion component is given <code>visible-xs</code>-class. That's it.</p>
+  <p><a href="http://tabcollapse.okendoken.com/example/example.html">Demo</a></p>
+  <h3 id="tabcollapse-use">Use</h3>
+  <p>Lets say you have your tabs component right from bootstrap's site:</p>
+{% highlight html %}
+<ul id="myTab" class="nav nav-tabs">
+  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  ...
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade in active" id="home">
+    <p>Raw denim you probably haven't...</p>
+  </div>
+  <div class="tab-pane fade" id="profile">
+    <p>Food truck fixie locavore, accus...</p>
+  </div>
+  ...
+</div>
+{% endhighlight %}
+  <p>To activate tab collapse just call:</p>
+{% highlight js %}
+$('#myTab').tabCollapse();
+{% endhighlight %}
+  <p>If you want to specify the class that is given to accordion and tabs components you can do so by passing options to <code>tabCollapse</code>:</p>
+{% highlight js %}
+$('#myTab').tabCollapse({
+  tabsClass: 'hidden-sm',
+  accordionClass: 'visible-sm'
+});
+{% endhighlight %}
+  <p>The default class is <code>hidden-xs</code>. So it means that tabs component will be switched to accordion for 767px and below. You can define your own classes and use them. You can also use multiple Bootstrap classes in order to, for example, show accordion for mobile + tablets and tabs for desktop+:</p>
+{% highlight js %}
+$('#myTab').tabCollapse({
+  tabsClass: 'hidden-sm hidden-xs',
+  accordionClass: 'visible-sm visible-xs'
+});
+{% endhighlight %}
+
+  <h3 id="tabcollapse-events">Events</h3>
+  <p>There are four events tabcollapse triggers (for <b>entire</b> component, not for single tabs or accordion groups!):</p>
+  <ul>
+    <li><b>show-tabs.bs.tabcollapse</b> - triggered before tabs component is shown</li>
+    <li><b>shown-tabs.bs.tabcollapse</b> - triggered after tabs component is shown</li>
+    <li><b>show-accordion.bs.tabcollapse</b> - triggered before accordion component is shown</li>
+    <li><b>shown-accordion.bs.tabcollapse</b> - triggered after accordion component is shown</li>
+  </ul>
+  <p>To attach event handler just call:</p>
+{% highlight js %}
+$('#myTab').on('shown-accordion.bs.tabcollapse', function(){
+  alert('accordion is shown now!');
+});
+{% endhighlight %}
+
+  <h4>Attach an event handler when either tab or collapse is opened:</h4>
+{% highlight js %}
+$(document).on("shown.bs.collapse shown.bs.tab", ".panel-collapse, a[data-toggle='tab']", function (e) {
+  alert('either tab or collapse opened - check arguments to distinguish ' + e);
+});
+{% endhighlight %}
+</div>
