@@ -76,6 +76,11 @@ gulp.task('advanced-menu', function() {
           break;
         case '12':
           gulp.start('styles-force');
+        case '21':
+          gulp.start('scripts');
+          break;
+        case '22':
+          gulp.start('scripts-force');
           break;
         case '31':
           gulp.start('layouts');
