@@ -1634,8 +1634,8 @@ h1[id] {
 
 /*  */
 
-.tck-addon h1:before,
-.tck-addon h2:before {
+.tck-addon > h1:before,
+.tck-addon > h2:before {
   background: transparent url(../img/logo64.png) no-repeat 0 0 /cover;
   content: '';
   display: inline-block;
