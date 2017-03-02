@@ -1,0 +1,17 @@
+[class^="glyphmap-"] {
+  background: transparent url('../img/glyphmap-default.png') no-repeat 0 0;
+  /*@include at2x('../img/glyphmap-default.png', 'png', $glyphmap-sprite-w, $glyphmap-sprite-h);*/
+  content: '';
+  display: inline-block;
+  height: #{$glyphmap-height}px;
+  vertical-align: middle;
+  width: #{$glyphmap-width}px;
+}
+.glyphmap-on,
+.active .glyphmap {
+  background-position-y: -32px;
+}
+/*.glyphmap-default { background-position: 0 -32px; }
+.active .glyphmap-default { background-position: -32px -32px; }*/
+
+@include glyphmap('default', 0);

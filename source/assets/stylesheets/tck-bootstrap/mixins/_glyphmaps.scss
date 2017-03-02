@@ -1,0 +1,21 @@
+// Glyphmap
+@mixin glyphmap($name, $index) {
+  $x: $glyphmap-width * $index;
+  $y: $glyphmap-height;
+
+  .glyphmap-#{$name} { background-position: -#{$x}px 0; }
+
+  .active .glyphmap-#{$name}.glyphmap-on,
+  .active .glyphmap-#{$name} {
+    background-position: -#{$x}px -#{$y}px;
+  }
+}
+
+// Transformations
+@mixin greyscale($factor) {
+  -webkit-filter: grayscale($factor);
+     -moz-filter: grayscale($factor);
+      -ms-filter: grayscale($factor); // IE9 only
+       -o-filter: grayscale($factor);
+          filter: grayscale($factor);
+}

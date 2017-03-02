@@ -5,12 +5,13 @@
  */
 
 // Core variables and mixins
+//@import 'tck-bootstrap/variables';
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables';
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
-//@import 'bootstrap/variables';
-//@import 'bootstrap/mixins';
+//@import 'tck-bootstrap/mixins';
 
 // Components
+@import 'tck-bootstrap/list-responsive';
 @import 'tck-bootstrap/media';
 @import 'tck-bootstrap/panels';
 @import 'tck-bootstrap/scaffolding';
