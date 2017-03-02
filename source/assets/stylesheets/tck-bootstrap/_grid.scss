@@ -1,0 +1,172 @@
+//
+// Grid system addons by TCK Bootstrap
+// --------------------------------------------------
+
+.row-vertical-border {
+  [class^="col-"] {
+    border-right: 1px solid $gray;
+
+    &:last-child {
+      border-right: 0 none;
+    }
+  }
+}
+
+.row-horizontal-border + .row-horizontal-border {
+  //border-top: 1px solid #f00;
+}
+
+.row-horizontal-border + .row-horizontal-border {
+
+  [class^="col-"] {
+
+    &:before {
+      border-top: 1px solid $gray;
+      content: '';
+      display: block;
+      height: 0;
+      width: 100%;
+    }
+
+  }
+
+
+}
+
+
+
+
+
+.row-fill > [class^="col-"] { background-color: $row-fill-default-bg; }
+.row-fill-primary > [class^="col-"] { background-color: $row-fill-primary-bg; }
+.row-fill-success > [class^="col-"] { background-color: $row-fill-success-bg; }
+.row-fill-info > [class^="col-"] { background-color: $row-fill-info-bg; }
+.row-fill-warning > [class^="col-"] { background-color: $row-fill-warning-bg; }
+.row-fill-danger > [class^="col-"] { background-color: $row-fill-danger-bg; }
+
+@media (max-width: $screen-xs-max) {
+  .row-xs-fill > [class^="col-"] { background-color: $row-fill-default-bg; }
+  .row-xs-fill-primary > [class^="col-"] { background-color: $row-fill-primary-bg; }
+  .row-xs-fill-success > [class^="col-"] { background-color: $row-fill-success-bg; }
+  .row-xs-fill-info > [class^="col-"] { background-color: $row-fill-info-bg; }
+  .row-xs-fill-warning > [class^="col-"] { background-color: $row-fill-warning-bg; }
+  .row-xs-fill-danger > [class^="col-"] { background-color: $row-fill-danger-bg; }
+}
+@media (min-width: $screen-sm-min) {
+  @media (max-width: $screen-sm-max) {
+    .row-sm-fill > [class^="col-"] { background-color: $row-fill-default-bg; }
+    .row-sm-fill-primary > [class^="col-"] { background-color: $row-fill-primary-bg; }
+    .row-sm-fill-success > [class^="col-"] { background-color: $row-fill-success-bg; }
+    .row-sm-fill-info > [class^="col-"] { background-color: $row-fill-info-bg; }
+    .row-sm-fill-warning > [class^="col-"] { background-color: $row-fill-warning-bg; }
+    .row-sm-fill-danger > [class^="col-"] { background-color: $row-fill-danger-bg; }
+  }
+}
+@media (min-width: $screen-md-min) {
+  @media (max-width: $screen-md-max) {
+    .row-md-fill > [class^="col-"] { background-color: $row-fill-default-bg; }
+    .row-md-fill-primary > [class^="col-"] { background-color: $row-fill-primary-bg; }
+    .row-md-fill-success > [class^="col-"] { background-color: $row-fill-success-bg; }
+    .row-md-fill-info > [class^="col-"] { background-color: $row-fill-info-bg; }
+    .row-md-fill-warning > [class^="col-"] { background-color: $row-fill-warning-bg; }
+    .row-md-fill-danger > [class^="col-"] { background-color: $row-fill-danger-bg; }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .row-lg-fill > [class^="col-"] { background-color: $row-fill-default-bg; }
+  .row-lg-fill-primary > [class^="col-"] { background-color: $row-fill-primary-bg; }
+  .row-lg-fill-success > [class^="col-"] { background-color: $row-fill-success-bg; }
+  .row-lg-fill-info > [class^="col-"] { background-color: $row-fill-info-bg; }
+  .row-lg-fill-warning > [class^="col-"] { background-color: $row-fill-warning-bg; }
+  .row-lg-fill-danger > [class^="col-"] { background-color: $row-fill-danger-bg; }
+}
+
+.col-fill { background-color: $row-fill-default-bg !important; }
+.col-fill-primary { background-color: $row-fill-primary-bg !important; }
+.col-fill-success { background-color: $row-fill-success-bg !important; }
+.col-fill-info { background-color: $row-fill-info-bg !important; }
+.col-fill-warning { background-color: $row-fill-warning-bg !important; }
+.col-fill-danger { background-color: $row-fill-danger-bg !important; }
+
+@media (max-width: $screen-xs-max) {
+  .col-xs-fill { background-color: $row-fill-default-bg !important; }
+  .col-xs-fill-primary { background-color: $row-fill-primary-bg !important; }
+  .col-xs-fill-success { background-color: $row-fill-success-bg !important; }
+  .col-xs-fill-info { background-color: $row-fill-info-bg !important; }
+  .col-xs-fill-warning { background-color: $row-fill-warning-bg !important; }
+  .col-xs-fill-danger { background-color: $row-fill-danger-bg !important; }
+}
+@media (min-width: $screen-sm-min) {
+  @media (max-width: $screen-sm-max) {
+    .col-sm-fill { background-color: $row-fill-default-bg !important; }
+    .col-sm-fill-primary { background-color: $row-fill-primary-bg !important; }
+    .col-sm-fill-success { background-color: $row-fill-success-bg !important; }
+    .col-sm-fill-info { background-color: $row-fill-info-bg !important; }
+    .col-sm-fill-warning { background-color: $row-fill-warning-bg !important; }
+    .col-sm-fill-danger { background-color: $row-fill-danger-bg !important; }
+  }
+}
+@media (min-width: $screen-md-min) {
+  @media (max-width: $screen-md-max) {
+    .col-md-fill { background-color: $row-fill-default-bg !important; }
+    .col-md-fill-primary { background-color: $row-fill-primary-bg !important; }
+    .col-md-fill-success { background-color: $row-fill-success-bg !important; }
+    .col-md-fill-info { background-color: $row-fill-info-bg !important; }
+    .col-md-fill-warning { background-color: $row-fill-warning-bg !important; }
+    .col-md-fill-danger { background-color: $row-fill-danger-bg !important; }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  .col-lg-fill { background-color: $row-fill-default-bg !important; }
+  .col-lg-fill-primary { background-color: $row-fill-primary-bg !important; }
+  .col-lg-fill-success { background-color: $row-fill-success-bg !important; }
+  .col-lg-fill-info { background-color: $row-fill-info-bg !important; }
+  .col-lg-fill-warning { background-color: $row-fill-warning-bg !important; }
+  .col-lg-fill-danger { background-color: $row-fill-danger-bg !important; }
+}
+
+
+/**
+
+row-border - Activa los bordes para todas las pantallas
+
+row-xs-border - Activa los bordes en xs
+row-sm-border - Activa los bordes en sm
+row-md-border - Activa los bordes en md
+row-lg-border - Activa los bordes en lg
+
+row-*-border-vertical
+row-*-border-horizontal
+
+row-border-inner - Activa los bordes interiores (default)
+row-border-outer - Activa los bordes exteriores
+
+
+
+row-fill
+row-xs-fill
+row-sm-fill
+row-md-fill
+row-lg-fill
+
+row-fill-default
+row-fill-primary
+row-fill-success
+row-fill-info
+row-fill-warning
+row-fill-danger
+
+col-fill
+col-xs-fill
+col-sm-fill
+col-md-fill
+col-lg-fill
+
+col-fill-default
+col-fill-primary
+col-fill-success
+col-fill-info
+col-fill-warning
+col-fill-danger
+
+*/

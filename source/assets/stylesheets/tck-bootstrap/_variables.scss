@@ -1,0 +1,17 @@
+//** Default map with (only number)
+$glyphmap-sprite-w: 128;
+//** Default map height (only number)
+$glyphmap-sprite-h: 64;
+//** Default map with (only number)
+$glyphmap-width:  32;
+//** Default map height (only number)
+$glyphmap-height:  32;
+
+
+
+$row-fill-default-bg:   lighten($gray-base, 93.5%) !default;
+$row-fill-primary-bg:   lighten($brand-primary, 33.5%) !default;
+$row-fill-success-bg:   lighten($brand-success, 33.5%) !default;
+$row-fill-info-bg:      lighten($brand-info, 33.5%) !default;
+$row-fill-warning-bg:   lighten($brand-warning, 33.5%) !default;
+$row-fill-danger-bg:    lighten($brand-danger, 33.5%) !default;
