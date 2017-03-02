@@ -1,0 +1,173 @@
+<div class="bs-docs-section tck-addon">
+  <h1 id="button-choose" class="button-choose">Button choose</h1>
+
+  <p class="lead">Grouping a serie of buttons using JavaScript radio and checkbox style behavior with <a href="../javascript/#buttons">oficial buttons plugin</a>.</p>
+
+  <p>Add <code>data-toggle="buttons"</code> to a <code>.btn-choose-group</code> containing checkbox or radio inputs to enable toggling in their respective styles.</p>
+  <div class="bs-callout bs-callout-warning" id="callout-buttons-multi-preselected">
+    <h4>Preselected options need <code>.active</code></h4>
+    <p>For preselected options, you must add the <code>.active</code> class to the input's <code>label</code> yourself.</p>
+  </div>
+  <div class="bs-callout bs-callout-warning" id="callout-buttons-only-click">
+    <h4>Visual checked state only updated on click</h4>
+    <p>If the checked state of a checkbox button is updated without firing a <code>click</code> event on the button (e.g. via <code>&lt;input type="reset"&gt;</code> or via setting the <code>checked</code> property of the input), you will need to toggle the <code>.active</code> class on the input's <code>label</code> yourself.</p>
+  </div>
+
+  <!--<div class="bs-callout bs-callout-warning" id="callout-btn-group-accessibility">
+    <h4>Ensure correct <code>role</code> and provide a label</h4>
+    <p>In order for assistive technologies – such as screen readers – to convey that a series of buttons is grouped, an appropriate <code>role</code> attribute needs to be provided. For button groups, this would be <code>role="group"</code>.</p>
+    <p>One exception are groups which only contain a single control (for instance the <a href="#btn-groups-justified">justified button groups</a> with <code>&lt;button&gt;</code> elements) or a dropdown.</p>
+    <p>In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct <code>role</code> attribute. In the examples provided here, we use <code>aria-label</code>, but alternatives such as <code>aria-labelledby</code> can also be used.</p>
+  </div>-->
+
+  <div class="bs-callout bs-callout-danger" id="callout-buttons-ff-autocomplete">
+    <h4>Cross-browser compatibility</h4>
+    <p><a href="https://github.com/twbs/bootstrap/issues/793">Firefox persists form control states (disabledness and checkedness) across page loads</a>. A workaround for this is to use <code>autocomplete="off"</code>. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">Mozilla bug #654072</a>.</p>
+  </div>
+
+  <div class="bs-callout bs-callout-danger" id="callout-buttons-ff-autocomplete">
+    <h4>Cross-browser compatibility</h4>
+    <p>The <code>.btn-choose-group</code> class implements <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">flexbox</a>.</p>
+  </div>
+
+  <h2 id="btn-choose-default">Basic example</h2>
+  <p>Checkboxes like big buttons.</p>
+  <p>Checkboxes like big buttons.</p>
+  <div class="bs-example" data-example-id="default-btn-choose">
+    <div class="btn-choose-group" data-toggle="buttons">
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="checkbox" autocomplete="off"> Checkbox 1
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="checkbox" autocomplete="off"> Checkbox 2
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="checkbox" autocomplete="off"> Checkbox 3
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+  {% highlight html %}
+
+  {% endhighlight %}
+
+  <p>Radio buttons like big buttons.</p>
+  <div class="bs-example" data-example-id="default-btn-choose">
+    <div class="btn-choose-group" data-toggle="buttons" role="group" aria-label="Basic example">
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="radio" autocomplete="off">
+            <span class="glyphmap-default"></span> Radio 1
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="radio" autocomplete="off">
+            <span class="glyphmap-default"></span> Radio 2
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="radio" autocomplete="off">
+            <span class="glyphmap-default"></span> Radio 3
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+  {% highlight html %}
+
+  {% endhighlight %}
+
+  <h2 id="btn-choose-glyphicon">Glyphicons</h2>
+  <p>By default, the glyphicons are in greyscale and 50% opacity. Whith the active state, the glypicons remove the greyscale and opacity.</p>
+  <div class="bs-example" data-example-id="default-btn-choose">
+    <div class="btn-choose-group" data-toggle="buttons" role="group" aria-label="Basic example">
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="checkbox" autocomplete="off">
+            <span class="glyphicon glyphicon-ok text-success"></span> Checkbox 1
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="checkbox" autocomplete="off">
+            <span class="glyphicon glyphicon-thumbs-up text-info"></span> Checkbox 2
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="checkbox" autocomplete="off">
+            <span class="glyphicon glyphicon-pushpin text-danger"></span> Checkbox 3
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+  {% highlight html %}
+
+  {% endhighlight %}
+
+  <h2 id="btn-choose-columns">Using columns</h2>
+  <p>Using columns to fill the entire row.</p>
+  <div class="bs-example" data-example-id="default-btn-choose">
+    <div class="row btn-choose-group" data-toggle="buttons" role="group" aria-label="Basic example">
+      <label class="btn btn-choose col-xs-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="radio" autocomplete="off">
+            <span class="glyphicon glyphicon-ok-circle"></span> Radio 1
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose col-xs-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="radio" autocomplete="off">
+            <span class="glyphicon glyphicon-ok-circle"></span> Radio 2
+          </div>
+        </div>
+      </label>
+
+      <label class="btn btn-choose col-xs-4">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <input type="radio" autocomplete="off">
+            <span class="glyphicon glyphicon-ok-circle"></span> Radio 3
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+  {% highlight html %}
+
+  {% endhighlight %}
+</div>
